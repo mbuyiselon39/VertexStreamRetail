@@ -1,20 +1,84 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0B2848"/>
-      <stop offset="1" stop-color="#071B33"/>
+    <!-- Premium background gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0A1E35"/>
+      <stop offset="0.5" stop-color="#0F2E4A"/>
+      <stop offset="1" stop-color="#051428"/>
     </linearGradient>
-    <linearGradient id="v1" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#00C9BD"/>
-      <stop offset="1" stop-color="#00A79D"/>
+    
+    <!-- Vibrant teal gradient -->
+    <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00F5E6"/>
+      <stop offset="1" stop-color="#00D4C4"/>
     </linearGradient>
-    <linearGradient id="v2" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFC928"/>
-      <stop offset="1" stop-color="#F37021"/>
+    
+    <!-- Vibrant orange gradient -->
+    <linearGradient id="orangeGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB847"/>
+      <stop offset="1" stop-color="#FF6B1A"/>
     </linearGradient>
+    
+    <!-- Accent highlight -->
+    <radialGradient id="highlight" cx="35%" cy="35%" r="60%">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.15"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    
+    <!-- Professional shadow -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
   </defs>
-  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <circle cx="392" cy="118" r="26" fill="#FFC928" opacity="0.9"/>
-  <path d="M120 150 L216 388 Q230 420 250 388 L268 344 L196 150 Q188 130 166 130 L138 130 Q112 130 120 150 Z" fill="url(#v1)"/>
-  <path d="M392 150 L296 388 Q282 420 262 388 L252 364 L316 150 Q324 130 346 130 L374 130 Q400 130 392 150 Z" fill="url(#v2)"/>
+  
+  <!-- Background with shine -->
+  <rect width="512" height="512" rx="120" fill="url(#bgGrad)"/>
+  <rect width="512" height="512" rx="120" fill="url(#highlight)"/>
+  
+  <!-- Main icon group with shadow -->
+  <g filter="url(#shadow)">
+    <!-- Left shopping bag (Teal) -->
+    <path d="M 130 190 
+             L 155 150 
+             Q 175 125 205 125 
+             L 245 125 
+             Q 260 125 260 140 
+             L 260 360 
+             Q 260 380 240 380 
+             L 150 380 
+             Q 130 380 130 360 Z" 
+          fill="url(#tealGrad)" opacity="0.97"/>
+    
+    <!-- Right shopping bag (Orange) -->
+    <path d="M 382 190 
+             L 357 150 
+             Q 337 125 307 125 
+             L 267 125 
+             Q 252 125 252 140 
+             L 252 360 
+             Q 252 380 272 380 
+             L 362 380 
+             Q 382 380 382 360 Z" 
+          fill="url(#orangeGrad)" opacity="0.97"/>
+    
+    <!-- Center divider with subtle glow -->
+    <rect x="250" y="150" width="12" height="220" fill="#ffffff" opacity="0.12" rx="3"/>
+    
+    <!-- Connection handle (unity) -->
+    <path d="M 190 125 Q 256 75 322 125" 
+          stroke="url(#tealGrad)" 
+          stroke-width="20" 
+          fill="none" 
+          stroke-linecap="round"
+          opacity="0.85"/>
+  </g>
+  
+  <!-- Decorative accent elements -->
+  <g opacity="0.75">
+    <circle cx="385" cy="105" r="20" fill="url(#orangeGrad)"/>
+    <circle cx="127" cy="125" r="15" fill="url(#tealGrad)"/>
+  </g>
+  
+  <!-- Center accent dot -->
+  <circle cx="256" cy="270" r="6" fill="#ffffff" opacity="0.25"/>
 </svg>
