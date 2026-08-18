@@ -1,84 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <!-- Premium background gradient -->
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#0A1E35"/>
-      <stop offset="0.5" stop-color="#0F2E4A"/>
-      <stop offset="1" stop-color="#051428"/>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0369a1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1" />
     </linearGradient>
-    
-    <!-- Vibrant teal gradient -->
-    <linearGradient id="tealGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#00F5E6"/>
-      <stop offset="1" stop-color="#00D4C4"/>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#164e63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f766e;stop-opacity:1" />
     </linearGradient>
-    
-    <!-- Vibrant orange gradient -->
-    <linearGradient id="orangeGrad" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#FFB847"/>
-      <stop offset="1" stop-color="#FF6B1A"/>
-    </linearGradient>
-    
-    <!-- Accent highlight -->
-    <radialGradient id="highlight" cx="35%" cy="35%" r="60%">
-      <stop offset="0" stop-color="#ffffff" stop-opacity="0.15"/>
-      <stop offset="1" stop-color="#ffffff" stop-opacity="0"/>
-    </radialGradient>
-    
-    <!-- Professional shadow -->
     <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
-      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-opacity="0.3"/>
+      <feDropShadow dx="0" dy="4" stdDeviation="3" flood-opacity="0.2"/>
     </filter>
   </defs>
   
-  <!-- Background with shine -->
-  <rect width="512" height="512" rx="120" fill="url(#bgGrad)"/>
-  <rect width="512" height="512" rx="120" fill="url(#highlight)"/>
+  <!-- Outer ring background -->
+  <circle cx="100" cy="100" r="95" fill="#f8fafc" stroke="url(#grad1)" stroke-width="2"/>
   
-  <!-- Main icon group with shadow -->
-  <g filter="url(#shadow)">
-    <!-- Left shopping bag (Teal) -->
-    <path d="M 130 190 
-             L 155 150 
-             Q 175 125 205 125 
-             L 245 125 
-             Q 260 125 260 140 
-             L 260 360 
-             Q 260 380 240 380 
-             L 150 380 
-             Q 130 380 130 360 Z" 
-          fill="url(#tealGrad)" opacity="0.97"/>
+  <!-- Main gradient circle -->
+  <circle cx="100" cy="100" r="85" fill="url(#grad1)" filter="url(#shadow)"/>
+  
+  <!-- Inner circle for depth -->
+  <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="1"/>
+  
+  <!-- Stream/wave symbol -->
+  <g transform="translate(100, 100)">
+    <!-- Left wave -->
+    <path d="M -25 -15 Q -15 -25 -5 -15 Q 5 -5 15 -15" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.9"/>
     
-    <!-- Right shopping bag (Orange) -->
-    <path d="M 382 190 
-             L 357 150 
-             Q 337 125 307 125 
-             L 267 125 
-             Q 252 125 252 140 
-             L 252 360 
-             Q 252 380 272 380 
-             L 362 380 
-             Q 382 380 382 360 Z" 
-          fill="url(#orangeGrad)" opacity="0.97"/>
+    <!-- Middle wave -->
+    <path d="M -30 0 Q -15 -8 0 0 Q 15 8 30 0" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
     
-    <!-- Center divider with subtle glow -->
-    <rect x="250" y="150" width="12" height="220" fill="#ffffff" opacity="0.12" rx="3"/>
+    <!-- Right wave -->
+    <path d="M -25 15 Q -10 5 5 15 Q 20 25 35 15" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.85"/>
     
-    <!-- Connection handle (unity) -->
-    <path d="M 190 125 Q 256 75 322 125" 
-          stroke="url(#tealGrad)" 
-          stroke-width="20" 
-          fill="none" 
-          stroke-linecap="round"
-          opacity="0.85"/>
+    <!-- Central dot/vertex -->
+    <circle cx="0" cy="0" r="4" fill="white" opacity="0.9"/>
   </g>
   
-  <!-- Decorative accent elements -->
-  <g opacity="0.75">
-    <circle cx="385" cy="105" r="20" fill="url(#orangeGrad)"/>
-    <circle cx="127" cy="125" r="15" fill="url(#tealGrad)"/>
-  </g>
+  <!-- Highlight/shine effect -->
+  <ellipse cx="70" cy="70" rx="20" ry="25" fill="white" opacity="0.15"/>
   
-  <!-- Center accent dot -->
-  <circle cx="256" cy="270" r="6" fill="#ffffff" opacity="0.25"/>
+  <!-- Bottom accent bar -->
+  <rect x="40" y="140" width="120" height="4" fill="url(#grad2)" rx="2"/>
 </svg>

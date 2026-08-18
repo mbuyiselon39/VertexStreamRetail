@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
             <h4 className="text-lg font-bold text-white mb-4">Get in Touch</h4>
             <ul className="space-y-2 text-sm">
               <li className="text-slate-400">
-                📞 <a href="tel:+27123456789" className="hover:text-white transition-colors">+27 (0) 12 345 6789</a>
+                📞 <a href="tel:+27710638878" className="hover:text-white transition-colors">+27 (0) 71 063 8878</a>
               </li>
               <li className="text-slate-400">
                 📧 <a href="mailto:info@vertexstream.co.za" className="hover:text-white transition-colors">info@vertexstream.co.za</a>

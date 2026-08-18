@@ -17,7 +17,7 @@ const Header: React.FC = () => {
             </div>
           </div>
           <a
-            href="https://wa.me/27123456789"
+            href="https://wa.me/27710638878"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden sm:inline-flex items-center gap-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"

@@ -102,7 +102,7 @@ const OrderForm: React.FC = () => {
 
       const message = `*Vertex Stream Retail Order*%0A%0A*Customer Details:*%0AName: ${customerName}%0AEmail: ${email}%0APhone: ${phone}%0AAddress: ${address}%0A%0A*Order Items:*%0A${orderSummary}%0A%0ATotal: R${totalPrice.toFixed(2)}%0A%0APlease confirm this order. Thank you!`
 
-      const whatsappUrl = `https://wa.me/27123456789?text=${message}`
+      const whatsappUrl = `https://wa.me/27710638878?text=${message}`
 
       // Simulate a small delay for better UX
       setTimeout(() => {
@@ -209,7 +209,7 @@ const OrderForm: React.FC = () => {
                   type="tel"
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="+27 123 456 789"
+                  placeholder="+27 710 638 878"
                   className={clsx('input-field', errors.phone && 'border-red-500 ring-2 ring-red-200')}
                   aria-describedby={errors.phone ? 'phone-error' : undefined}
                 />
