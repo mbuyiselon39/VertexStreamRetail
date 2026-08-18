@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://vertexstreamretail.pages.dev/sitemap.xml
+# Crawl-delay and other rules can be added here if needed.
