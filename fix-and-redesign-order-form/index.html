@@ -2,15 +2,29 @@
 <html lang="en-ZA">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
-    />
-    <meta
-      name="description"
-      content="Vertex Stream Retail - wholesale groceries at unbeatable prices. Build your basket and order in one WhatsApp message. Free delivery within 25 km."
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    <meta name="description" content="Vertex Stream Retail - wholesale groceries delivered. Browse our catalogue, build your basket, and confirm your whole order in one WhatsApp message. Free delivery within 25 km." />
     <meta name="theme-color" content="#071B33" />
+
+    <!-- Canonical & hreflang -->
+    <link rel="canonical" href="https://vertexstreamretail.pages.dev/" />
+    <link rel="alternate" href="https://vertexstreamretail.pages.dev/" hreflang="en-ZA" />
+    <link rel="alternate" href="https://vertexstreamretail.pages.dev/zu/" hreflang="zu" />
+    <link rel="alternate" href="https://vertexstreamretail.pages.dev/st/" hreflang="st" />
+    <link rel="alternate" href="https://vertexstreamretail.pages.dev/af/" hreflang="af" />
+
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_ZA" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Vertex Stream Retail — Wholesale groceries, order on WhatsApp" />
+    <meta property="og:description" content="Stock up for less. Browse our catalogue and place your order in one WhatsApp message — free delivery within 25 km." />
+    <meta property="og:image" content="https://vertexstreamretail.pages.dev/images/og-hero.svg" />
+    <meta property="og:url" content="https://vertexstreamretail.pages.dev/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@VertexStream" />
 
     <!-- PWA -->
     <link rel="manifest" href="/manifest.webmanifest" />
@@ -23,9 +37,21 @@
     <meta name="apple-mobile-web-app-title" content="Vertex Stream" />
     <link rel="apple-touch-icon" href="/icons/icon.svg" />
 
+    <!-- Structured data (Store) -->
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"Store","name":"Vertex Stream Retail","url":"https://vertexstreamretail.pages.dev/","logo":"https://vertexstreamretail.pages.dev/icons/icon-192.png","sameAs":["https://wa.me/27710638878"],"address":{"@type":"PostalAddress","addressLocality":"Cape Town","addressCountry":"ZA"}}
+    </script>
+
     <title>Vertex Stream Retail - WhatsApp Order Form</title>
+
+    <style>
+      /* small helper for skip-link visibility */
+      .skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+      .skip-link:focus{position:static;width:auto;height:auto;left:0;margin:8px;z-index:9999}
+    </style>
   </head>
   <body>
+    <a class="skip-link" href="#root">Skip to content</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
